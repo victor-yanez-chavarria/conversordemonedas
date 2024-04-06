@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+   <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Conversor de monedas</title>
+</head>
+<body>
+    <div class="container">
+        <hr>
+        <h1>Conversor de Monedas Nacional</h1>
+        <hr>
+        <div class="card">
+            <div class="clp">
+                <h2>Pesos CLP</h2>
+                <input type="number" name="clpAmount" id="clpAmount" placeholder="Ingrese el monto en CLP">
+            </div>
+            <div class="convert">
+                <label for="currencies"><strong>Moneda a convertir:</strong></label>
+                <select name="currencies" id="currencies">
+                </select>
+                <input type="button" value="Buscar" id="convert">
+                 <!-- Modal Común  -->
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                      <p>Debe ingresar un monto en pesos para convertirlo a la moneda deseada y seleccionar una divisa.</p>
+                      <input type="button" value="OK" id="OK">
+                    </div>
+                </div>
+                <!-- COMUN MODAL END -->
+            </div>
+            <div class="loader">
+                <span class="animatedLoader"></span>
+                <p id="answer">...</p>
+                <p id="valueOfDay" ></p>
+            </div>
+            <div class="chart">
+                <canvas id="myChart">
+
+                </canvas>
+            </div>
+        </div>
+        <div class="error">
+            <img src="./assets/img/pngwing.com (1).png" alt="gif error">
+            <p class="errorMessage">mensaje de error</p>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/script.js"></script>
+</html>
